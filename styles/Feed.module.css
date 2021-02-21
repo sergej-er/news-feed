@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .filter {
+  display: flex;
+  margin: 8px 0 16px 0;
+}
