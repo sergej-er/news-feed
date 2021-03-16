@@ -2,7 +2,7 @@ import { Card, Divider, Image } from 'antd';
 
 const Post = ({ article }) => {
   function handleClick() {
-    window.location.href = article.url;
+    window.open(article.url, '_blank');
   }
 
   function formatDescription(article) {
@@ -15,7 +15,13 @@ const Post = ({ article }) => {
   return (
     <Card
       hoverable
-      cover={<Image src={article.urlToImage} fallback='/img/placeholder.jpg' />}
+      cover={
+        <Image
+          src={article.urlToImage}
+          fallback='/img/placeholder.jpg'
+          preview={false}
+        />
+      }
       hoverable={true}
       style={{ maxWidth: 500, margin: '0 25px 0 25px' }}
       onClick={handleClick}
